@@ -1,0 +1,44 @@
+xor r0, r0 //r0 <- 0
+//loading base address of image
+ori r0, image_addr[31:26]
+sli r0, 6
+ori r0, image_addr[25:20]
+sli r0, 6
+ori r0, image_addr[19:14]
+sli r0, 6
+ori r0, image_addr[13:8]
+sli r0, 6
+ori r0, image_addr[7:2]
+sli r0, 2
+ori r0, image_addr[1:0]
+//getting the height of the image
+load r2, r0(0)
+load r1, r0(1)
+sli r1, 8
+or r1, r2//r1 <- height of the image
+//getting the width of the image
+load r3, r0(2)
+load r2, r0(3)
+sli r2, 8
+or r2, r3 // r2 <- width of the image
+mov r4, r2 // r3 <- x <- width
+mov r5, r1 // r4 <- y <- height
+xor r3, r3
+or r3, r0
+add r3, 4 // r3 <- mem address of image[0][0]
+loop2: xor r9, r9
+load r8, r3(0)
+loop1: load r7, r3(1)
+sli r8, 2
+add r9, r8
+add r9, r7
+srai r9, 2
+store r9, r3(0)
+addi r3, 1 // coordinate of next pixel
+sri r8, 1
+mov r9, r8
+mov r8, r7
+addi r4, -1
+beqz r4, loop1
+addi r5, -1
+beqz r5, loop2

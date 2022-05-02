@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-02T03:46:15.621Z" agent="5.0 (X11)" etag="0yndqQi3oH2ka16dVchl" version="17.5.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-05-02T03:48:28.500Z" agent="5.0 (X11)" etag="p-mUcSi7s1u5Nys8jcF4" version="17.5.0" type="github" pages="4">
   <diagram id="jAKgODnmO8hQ9NllSu6u" name="register file">
     <mxGraphModel dx="1930" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -833,7 +833,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="3NbGW7wnAMUHKsFFmifL-1" value="&lt;div&gt;fetch byte PC&lt;/div&gt;&lt;div&gt;(initial)&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;fetch_inst_1&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="110" width="120" height="60" as="geometry" />
+          <mxGeometry x="280" y="120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="3NbGW7wnAMUHKsFFmifL-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="3NbGW7wnAMUHKsFFmifL-3" target="3NbGW7wnAMUHKsFFmifL-6" edge="1">
           <mxGeometry relative="1" as="geometry">

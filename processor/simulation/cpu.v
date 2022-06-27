@@ -1,0 +1,391 @@
+/* verilator lint_off DECLFILENAME */
+/* verilator lint_off UNUSED */
+
+module registerFile(
+
+    input [3:0] rs1, 
+    input [3:0] rs2,
+    output [31:0] out_rs1,
+    output [31:0] out_rs2,
+    input wrEn,
+
+    input clk,
+    input [3:0] rd,
+    input [31:0] wr_data
+    );
+
+    reg [31:0] register_file [15:0];
+    assign out_rs1 = register_file[rs1];
+    assign out_rs2 = register_file[rs2];
+
+    always@(posedge clk)begin
+        if(wrEn)begin
+            register_file[rd] <= wr_data;
+        end
+    end
+
+endmodule
+
+module alu(
+
+    input [3:0] alu_op,
+    input [31:0] op1, 
+    input [31:0] op2,
+    output [31:0] alu_out,
+
+    output is_zero
+    );
+
+    wire [31:0] result_xor = op1 ^ op2;
+    wire [31:0] result_sra = $signed(op1) >>> op2;
+    wire [31:0] result_or = op1 | op2;
+    wire [31:0] result_sll = op1 << op2;
+    wire [31:0] result_add = op1 + op2;
+
+    wire isXOR = alu_op == 4'b0011;
+    wire isSRA = alu_op == 4'b1001;
+    wire isOR  = alu_op == 4'b1000;
+    wire isSLL = alu_op == 4'b0111;
+    wire isADD = alu_op == 4'b1111;
+
+    //wire [31:0] output =
+
+    assign alu_out = 
+    (isXOR ? result_xor : 32'b0)|
+    (isSRA ? result_sra : 32'b0)|
+    (isOR  ? result_or  : 32'b0)|
+    (isSLL ? result_sll : 32'b0)|
+    (isADD ? result_add : 32'b0);
+    
+    assign is_zero = ~|op1;
+
+endmodule
+
+module datapath(
+
+    input wrEn,
+    input [3:0] rs1,
+    input [3:0] rs2,
+    input [3:0] rd,
+    input [31:0] alu_imm,
+    input choose_alu_imm,
+    input [3:0] alu_op,
+
+    input clk,
+    input update_1,
+    input update_2,
+
+    input [31:0] load_data,
+    input choose_load_data,
+    output [31:0] mem_address,
+    output [31:0] write_data,
+
+    input isBranch,
+    output [31:0] nextPC,
+    input [31:0] branch_imm,
+    input [31:0] PC
+);
+
+    reg [31:0] op1;
+    reg [31:0] op2;
+    reg [31:0] writeback_buffer;
+    reg [31:0] branch_imm_buffer;
+    reg [31:0] PC_buffer;
+    reg [31:0] new_PC_buffer;
+
+    wire [31:0] out_rs1;
+    wire [31:0] out_rs2;
+    wire [31:0] op2_wire = choose_alu_imm ? alu_imm : out_rs2;
+    wire [31:0] alu_result;
+    wire is_zero;
+
+    wire [31:0] link_address = PC_buffer + 32'h00000002;
+    wire [31:0] branch_address = PC_buffer + branch_imm_buffer;
+
+    wire [31:0] writeback_data = choose_load_data ? load_data : alu_result;
+    wire [31:0] branch_result = is_zero ? link_address : branch_address;
+    wire [31:0] new_PC = isBranch ? branch_result : link_address;
+
+    registerFile datapath_register_file(
+        .rs1(rs1),
+        .rs2(rs2),
+        .out_rs1(out_rs1),
+        .out_rs2(out_rs2),
+        .wrEn(wrEn),
+
+        .clk(clk),
+        .rd(rd),
+        .wr_data(writeback_data)
+    );
+
+    alu datapath_alu(
+        .alu_op(alu_op),
+        .op1(op1),
+        .op2(op2),
+        .alu_out(alu_result),
+        .is_zero(is_zero)
+    );
+
+    assign mem_address = alu_result;
+    assign write_data = out_rs2;
+    assign nextPC = new_PC; 
+
+    always@(posedge clk)begin
+        if(update_1)begin
+            op1 <= out_rs1;
+            op2 <= op2_wire;
+            branch_imm_buffer <= branch_imm;
+            PC_buffer <= PC;  
+        end
+
+        if(update_2)begin
+            writeback_buffer <= writeback_data;
+        end
+
+        /* if(update_new_PC)begin
+            new_PC_buffer <= newPC;
+        end */
+    end
+
+endmodule
+
+module controlStore(
+
+    output wrEn,
+    output [3:0] rs1,
+    output [3:0] rs2,
+    output [3:0] rd,
+    output [31:0] alu_imm,
+    output choose_alu_imm,
+    output [3:0] alu_op,
+
+    input clk,
+    output update_1,
+    output update_2,
+
+    output choose_PC,//load instruction not data
+
+    output is_branch,
+    output choose_load_data,
+    input [31:0] nextPC,//from data path
+
+    output [31:0] branch_imm,
+    output [31:0] current_PC,
+
+    input reset,
+
+    input [7:0] instByte,
+
+    output write_back_mem
+
+);
+
+    reg [31:0] PC;
+    reg [15:0] inst;
+    reg [3:0] stateReg;
+
+    wire [3:0] fetch_inst_1 = 4'd0;
+    wire [3:0] fetch_inst_2 = 4'd1;
+    wire [3:0] set_signals = 4'd2;
+    wire [3:0] read_registers = 4'd3;
+    wire [3:0] get_result = 4'd4;
+    wire [3:0] write_back = 4'd5;
+    wire [3:0] calc_new_PC = 4'd6;
+    wire [3:0] buffer_request = 4'd7;
+    wire [3:0] read_mem = 4'd8;
+    wire [3:0] mem_write = 4'd9;
+
+    wire isRegReg = inst[2:0] == 3'b010;
+    wire isRegImm = inst[2:0] == 3'b110;
+    wire isLoad = inst[2:0] == 3'b100;
+    wire isStore = inst[2:0] == 3'b101;
+    wire isMove = inst[2:0] == 3'b111;
+
+    wire isMemAccess = inst[2:1] == 2'b10;
+    wire isBranch = inst[2:0] == 3'b011;
+    wire isMemWrite = inst[0];
+    wire isMove = inst[2:0] == 3'b111;
+    wire isArithmatic = inst[1:0] == 2'b10;
+
+    wire [31:0] negative = 32'hffffffff;
+    wire [31:0] positive = 32'h00000000;
+
+    wire [3:0] register1 = inst[15:12];
+    wire [3:0] ALU_op = inst[11:8];
+    wire [3:0] base_addr = inst[11:8];
+    wire [3:0] register2 = inst[7:4];
+    wire [31:0] immediate = {(inst[7] ? negative[31:4] : positive[31:4]), inst[6:3]};
+    wire [31:0] branch_immediate = {(inst[11] ? negative[31:8] : positive[31:8]), inst[10:3]};
+
+    assign rs1 = isMemAccess ? base_addr : (isMove ? register2 : register1);
+    assign rs2 = isStore ? register1 : register2;
+    assign rd = register1;
+    assign alu_imm = (isMove? 32'h00000000 : immediate);
+    assign choose_alu_imm = inst[2];
+    assign alu_op = isArithmatic ? ALU_op : 4'b1111;
+    assign branch_imm = branch_immediate;
+    assign is_branch = isBranch;
+
+    assign current_PC = PC;
+
+    assign choose_PC = (stateReg == fetch_inst_1) || (stateReg == fetch_inst_2);
+
+    assign choose_load_data = isMemAccess;
+
+    assign update_1 = stateReg == read_registers;
+    assign update_2 = stateReg == get_result;
+    assign wrEn = stateReg == write_back;
+
+    assign write_back_mem = stateReg == mem_write;
+
+    always@(posedge clk)begin
+        if(reset)begin
+            PC <= 0;
+            stateReg <= fetch_inst_1;
+
+        end else if(stateReg == fetch_inst_1) begin
+            inst <= {inst[15:8], instByte};
+            stateReg <= fetch_inst_2;
+            PC <= PC | 32'h00000001;
+
+        end else if(stateReg == fetch_inst_2) begin
+            inst <= {instByte, inst[7:0]};
+            stateReg <= set_signals;
+
+        end else if(stateReg == set_signals) begin
+            stateReg <= read_registers;
+
+        end else if(stateReg == read_registers) begin
+            if(isMemAccess)begin
+                stateReg <= buffer_request;
+            end else begin
+                stateReg <= get_result;
+            end
+
+        end else if(stateReg == get_result)begin
+            if(isBranch) begin
+                stateReg <= calc_new_PC;
+            end else begin
+                stateReg <= write_back;
+            end
+
+        end else if(stateReg == write_back)begin
+            stateReg <= calc_new_PC;
+
+        end else if(stateReg == buffer_request)begin
+            if(isMemWrite) begin
+                stateReg <= mem_write;
+            end else begin
+                stateReg <= read_mem;
+            end
+
+        end else if(stateReg == mem_write)begin
+            stateReg <= calc_new_PC;
+
+        end else if (stateReg == read_mem)begin
+            stateReg <= get_result;
+
+        end else if(stateReg == calc_new_PC)begin
+            stateReg <= fetch_inst_1;
+            PC <= nextPC;
+
+        end
+
+    end
+
+
+endmodule
+
+module cpu(
+    input clk,
+    input reset,
+
+    input [7:0] read_data,
+    output [7:0] write_data_mem,
+    output [31:0] address,
+
+    output writeBack
+);
+
+    wire wrEn;
+    wire [3:0] rs1;
+    wire [3:0] rs2;
+    wire [3:0] rd;
+    wire [31:0] alu_imm;
+    wire choose_alu_imm;
+    wire [3:0] alu_op;
+
+    wire update_1;
+    wire update_2;
+
+    wire [31:0] load_data = {24'h000, read_data};
+    wire choose_load_data;
+    wire [31:0] mem_address;
+    wire [31:0] write_data;
+
+    wire isBranch;
+    wire [31:0] nextPC;
+    wire [31:0] branch_imm;
+    wire [31:0] PC;
+
+    datapath datapath(
+        .wrEn(wrEn),
+        .rs1(rs1),
+        .rs2(rs2),
+        .rd(rd),
+        .alu_imm(alu_imm),
+        .choose_alu_imm(choose_alu_imm),
+        .alu_op(alu_op),
+
+        .clk(clk),
+        .update_1(update_1),
+        .update_2(update_2),
+
+        .load_data(load_data),
+        .choose_load_data(choose_load_data),
+        .mem_address(mem_address),
+        .write_data(write_data),
+
+        .isBranch(isBranch),
+        .nextPC(nextPC),
+        .branch_imm(branch_imm),
+        .PC(PC & 32'hfffffffe)
+    );
+
+    wire choose_PC;
+    wire write_back_mem;
+
+    controlStore controlStore(
+        .wrEn(wrEn),
+        .rs1(rs1),
+        .rs2(rs2),
+        .rd(rd),
+        .alu_imm(alu_imm),
+        .choose_alu_imm(choose_alu_imm),
+        .alu_op(alu_op),
+        .clk(clk),
+
+        .update_1(update_1),
+        .update_2(update_2),
+
+        .choose_PC(choose_PC),//load instruction not data
+
+        .is_branch(isBranch),
+        .choose_load_data(choose_load_data),
+        .nextPC(nextPC),//from data path
+        .branch_imm(branch_imm),
+        .current_PC(PC),
+
+        .reset(reset),
+
+        .instByte(read_data),
+
+        .write_back_mem(write_back_mem)
+    );
+
+    assign address = choose_PC ? PC : mem_address;
+    assign write_data_mem = write_data[7:0];
+
+    assign writeBack = write_back_mem;
+
+endmodule

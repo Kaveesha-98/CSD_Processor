@@ -389,3 +389,44 @@ module cpu(
     assign writeBack = write_back_mem;
 
 endmodule
+
+module testbench(
+    input startProgram,
+    input [31:0] programAddress,
+    input [7:0] programByte,
+    input programWrEn,
+
+    input reset,
+    input clk
+);
+
+    wire [7:0] write_data_mem;
+    reg [7:0] memory [1023:0];
+    wire [31:0] address;
+
+    wire writeBack;
+
+    cpu cpu(
+        .reset(reset),
+        .clk(clk),
+
+        .read_data(memory[address]),
+        .address(address),
+
+        .writeBack(writeBack),
+        .write_data_mem(write_data_mem)
+    );
+
+    always@(posedge clk)begin
+        if(!startProgram)begin
+            if(programWrEn)begin
+                memory[programAddress] <= programByte;
+            end
+        end else begin
+            if(writeBack)begin
+                memory[address] <= write_data_mem;
+            end
+        end
+    end
+
+endmodule

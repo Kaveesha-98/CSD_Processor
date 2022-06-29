@@ -96,12 +96,45 @@ int main(int argc, char **argv){
 		tick(++tickcount, tb, tfp);
 	} */
 
+	//loading image
+	tb -> programAddress = 256;
+	tb -> programByte = 9;
+
+	tick(++tickcount, tb, tfp);
+
+	tb -> programAddress = 257;
+	tb -> programByte = 0;
+
+	tick(++tickcount, tb, tfp);
+
+	tb -> programAddress = 258;
+	tb -> programByte = 7;
+
+	tick(++tickcount, tb, tfp);
+
+	tb -> programAddress = 259;
+	tb -> programByte = 0;
+
+	tick(++tickcount, tb, tfp);
+
+	for(int imageAddress = 260; imageAddress < 260 + 7*9; imageAddress++){
+		tb -> programAddress = imageAddress;
+		tb -> programByte = imageAddress - 256;
+
+		tick(++tickcount, tb, tfp);
+	}
+
 	tb -> programWrEn = 0;
 	tb -> reset = 0;
 
 	tick(++tickcount, tb, tfp);
 
-	for (int i = 0; i < 30; i++){
+	/* for (int i = 0; i < 1000; i++){
+		tick(++tickcount, tb, tfp);
+	} */
+
+	while(tb-> PC_out < 68){
+		//cout << tb -> PC_out << endl;
 		tick(++tickcount, tb, tfp);
 	}
 

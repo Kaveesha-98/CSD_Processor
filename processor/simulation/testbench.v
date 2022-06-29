@@ -215,7 +215,7 @@ module controlStore(
     wire [3:0] base_addr = inst[11:8];
     wire [3:0] register2 = inst[7:4];
     wire [31:0] immediate = {(inst[7] ? negative[31:4] : positive[31:4]), inst[6:3]};
-    wire [31:0] branch_immediate = {(inst[11] ? negative[31:8] : positive[31:8]), inst[10:3]};
+    wire [31:0] branch_immediate = {(inst[11] ? negative[31:9] : positive[31:9]), inst[11:3]};
 
     assign rs1 = isMemAccess ? base_addr : (isMove ? register2 : register1);
     assign rs2 = isStore ? register1 : register2;
@@ -299,6 +299,8 @@ endmodule
 module cpu(
     input clk,
     input reset,
+
+    output [31:0] PC_out,
 
     input [7:0] read_data,
     output [7:0] write_data_mem,
@@ -388,6 +390,8 @@ module cpu(
 
     assign writeBack = write_back_mem;
 
+    assign PC_out = PC & 32'hfffffffe;
+
 endmodule
 
 module testbench(
@@ -395,6 +399,8 @@ module testbench(
     input [31:0] programAddress,
     input [7:0] programByte,
     input programWrEn,
+
+    output [31:0] PC_out,
 
     input reset,
     input clk
@@ -414,7 +420,9 @@ module testbench(
         .address(address),
 
         .writeBack(writeBack),
-        .write_data_mem(write_data_mem)
+        .write_data_mem(write_data_mem),
+
+        .PC_out(PC_out)
     );
 
     always@(posedge clk)begin

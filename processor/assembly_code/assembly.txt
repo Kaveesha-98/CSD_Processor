@@ -21,7 +21,7 @@ load r3, r0(2)
 load r2, r0(3)
 sli r2, 8
 or r2, r3 // r2 <- width of the image
-mov r4, r2 // r4 <- x <- width//----------------------------line 13
+addi r2, -1 // r4 <- x <- width//----------------------------line 13
 mov r5, r1 // r5 <- y <- height
 mov r3, r0//r3 <- r0
 add r3, 4 // r3 <- mem address of image[0][0]
@@ -40,33 +40,44 @@ mov r9, r8
 mov r8, r7
 addi r4, -1
 bgtz r4, loop1//--------------------------------------------line 31
+sli r8, 1//last pixel in row, zero padding
+add r9, r8
+srai r9, 2
+store r9, r3(0)
+addi r3, 1 // coordinate of next pixel
 addi r5, -1
-beqz r5, loop2
+bgtz r5, loop2//--------------------------------------------line 38
+addi r2, 1
+addi r1, -1
 mov r10, r0
-add r10, 4 // r10 <- mem address of image[0][0]
+addi r10, 4 // r10 <- mem address of image[0][0]
 mov r3, r10// r3 <- mem address of image[0][0]
 mov r5, r2 // r5 <- x <- width
-loop4: xor r9, r9
+loop4: xor r9, r9//-----------------------------------------line 45
 load r8, r3(0)
 mov r4, r1 // r4 <- y <- height
 mov r11, r3
-loop3: add r11, r2
+loop3: add r11, r2//----------------------------------------line 49
 load r7, r11(0)
-sli r8, 2
+sli r8, 1
 add r9, r8
 add r9, r7
 srai r9, 2
 store r9, r3(0)
-addi r3, r1 // coordinate of next pixel
-sri r8, 1
+addi r3, r2 // coordinate of next pixel
+srai r8, 1
 mov r9, r8
 mov r8, r7
 addi r4, -1
-beqz r4, loop3
+bgtz r4, loop3//--------------------------------------------line 61
+sli r8, 1//last pixel in row, zero padding
+add r9, r8
+srai r9, 2
+store r9, r3(0)
 addi r5, -1
 add r10, 1//r10 <- address of new column
 mov r3, r10
-beqz r5, loop4
+bgtz r5, loop4//---------------------------------------------line 69
 //downsampling
 mov r10, r0
 add r10, 4 // r10 <- mem address of image[0][0]

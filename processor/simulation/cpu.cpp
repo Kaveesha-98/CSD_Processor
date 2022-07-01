@@ -124,8 +124,11 @@ int main(int argc, char **argv){
 		tick(++tickcount, tb, tfp);
 	}
 
+	int image[7*9]; 
+
 	tb -> programWrEn = 0;
 	tb -> reset = 0;
+	tb -> startProgram = 1;
 
 	tick(++tickcount, tb, tfp);
 
@@ -133,9 +136,20 @@ int main(int argc, char **argv){
 		tick(++tickcount, tb, tfp);
 	} */
 
-	while(tb-> PC_out < 68){
+	while(tb-> PC_out < 70*2){
 		//cout << tb -> PC_out << endl;
+		if(tb-> writeAddress > 259 && tb -> wrEnMem == 1){
+			image[tb-> writeAddress - 260] = tb -> writeData;
+			//cout << tb-> writeAddress << " = " << (tb -> writeData + 0) <<'\n';
+		}
 		tick(++tickcount, tb, tfp);
+	}
+
+	for(int row = 0; row < 9; row++){
+		for(int col = 0; col < 7; col++){
+			cout << image[row*7 + col] << ' ';
+		}
+		cout << endl;
 	}
 
 }

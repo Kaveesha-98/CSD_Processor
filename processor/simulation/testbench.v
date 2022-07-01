@@ -395,6 +395,10 @@ module cpu(
 endmodule
 
 module testbench(
+    output [31:0] writeAddress,
+    output [7:0] writeData,
+    output wrEnMem,
+
     input startProgram,
     input [31:0] programAddress,
     input [7:0] programByte,
@@ -436,5 +440,9 @@ module testbench(
             end
         end
     end
+
+    assign writeAddress = address;
+    assign wrEnMem = writeBack;
+    assign writeData = write_data_mem;
 
 endmodule

@@ -406,13 +406,17 @@ module testbench(
 
     output [31:0] PC_out,
 
+    output decimated_out,
+
     input reset,
     input clk
 );
 
     wire [7:0] write_data_mem;
-    reg [7:0] memory [1023:0];
+    reg [7:0] memory [1048576:0];
     wire [31:0] address;
+
+    reg filtered;
 
     wire writeBack;
 
@@ -430,6 +434,11 @@ module testbench(
     );
 
     always@(posedge clk)begin
+        if(reset)begin
+            filtered = 1'b0;
+        end else if(writeBack & address == 32'h0000ffff)begin
+            filtered = 1'b1;
+        end
         if(!startProgram)begin
             if(programWrEn)begin
                 memory[programAddress] <= programByte;
@@ -444,5 +453,7 @@ module testbench(
     assign writeAddress = address;
     assign wrEnMem = writeBack;
     assign writeData = write_data_mem;
+
+    assign decimated_out = filtered;
 
 endmodule

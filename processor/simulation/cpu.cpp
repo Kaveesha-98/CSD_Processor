@@ -71,6 +71,8 @@ int main(int argc, char **argv){
 
 	string myText;
 
+	cout << "loading instructions\n";
+
 	// Read from the text file
 	ifstream MyReadFile("instructions.txt");
 
@@ -96,34 +98,55 @@ int main(int argc, char **argv){
 		tick(++tickcount, tb, tfp);
 	} */
 
-	//loading image
-	tb -> programAddress = 256;
-	tb -> programByte = 9;
+	bool realImage = true;
 
-	tick(++tickcount, tb, tfp);
-
-	tb -> programAddress = 257;
-	tb -> programByte = 0;
-
-	tick(++tickcount, tb, tfp);
-
-	tb -> programAddress = 258;
-	tb -> programByte = 7;
-
-	tick(++tickcount, tb, tfp);
-
-	tb -> programAddress = 259;
-	tb -> programByte = 0;
-
-	tick(++tickcount, tb, tfp);
-
-	for(int imageAddress = 260; imageAddress < 260 + 7*9; imageAddress++){
-		tb -> programAddress = imageAddress;
-		tb -> programByte = imageAddress - 256;
+	if(!realImage){
+		//loading image
+		tb -> programAddress = 256;
+		tb -> programByte = 9;
 
 		tick(++tickcount, tb, tfp);
-	}
 
+		tb -> programAddress = 257;
+		tb -> programByte = 0;
+
+		tick(++tickcount, tb, tfp);
+
+		tb -> programAddress = 258;
+		tb -> programByte = 7;
+
+		tick(++tickcount, tb, tfp);
+
+		tb -> programAddress = 259;
+		tb -> programByte = 0;
+
+		tick(++tickcount, tb, tfp);
+
+		for(int imageAddress = 260; imageAddress < 260 + 7*9; imageAddress++){
+			tb -> programAddress = imageAddress;
+			tb -> programByte = imageAddress - 256;
+
+			tick(++tickcount, tb, tfp);
+		}
+	} else {
+		cout << "loading image\n";
+
+		ifstream imageFile("imageFile.txt");
+
+		address = 256; 
+
+		// Use a while loop together with the getline() function to read the file line by line
+		while (getline (imageFile, myText)) {
+		// Output the text from the file
+			tb -> programAddress = address;
+			tb -> programByte = stoi(myText);
+			tick(++tickcount, tb, tfp);
+			address++;
+		}
+
+		// Close the file
+		imageFile.close();
+	}
 	int image[7*9]; 
 
 	tb -> programWrEn = 0;
@@ -136,20 +159,82 @@ int main(int argc, char **argv){
 		tick(++tickcount, tb, tfp);
 	} */
 
+	int row, col;
+
+	ofstream outfile;
+   	outfile.open("decimatedImage.txt");
+
+	cout << "performing horizontal convolution\n";
+
+	while(tb-> PC_out < 39*2){
+		//cout << tb -> PC_out << endl;
+		if(tb-> writeAddress > 259 && tb -> wrEnMem == 1){
+			//image[tb-> writeAddress - 260] = tb -> writeData;
+			//cout << tb-> writeAddress << " = " << (tb -> writeData + 0) <<'\n';
+			//outfile << tb-> writeAddress << ' ' << (tb -> writeData + 0) << endl;
+			address = (tb-> writeAddress) - 4;
+			row = address/400;
+			col = address%400;
+			cout << "performing horizontal convolution on row:" << '\t' << row << " and col:" << '\t' << col << '\t' << '\r';
+
+		}
+		tick(++tickcount, tb, tfp);
+	}
+
+	cout << "performing vertical convolution                                                                \n";
+
 	while(tb-> PC_out < 70*2){
 		//cout << tb -> PC_out << endl;
 		if(tb-> writeAddress > 259 && tb -> wrEnMem == 1){
 			image[tb-> writeAddress - 260] = tb -> writeData;
 			//cout << tb-> writeAddress << " = " << (tb -> writeData + 0) <<'\n';
+			//outfile << tb-> writeAddress << ' ' << (tb -> writeData + 0) << endl;
+			address = (tb-> writeAddress) - 4;
+			row = address/400;
+			col = address%400;
+			cout << "performing vertical convolution on row:" << '\t' << row << " and col:" << '\t' << col << '\t' << '\r';
+
 		}
 		tick(++tickcount, tb, tfp);
 	}
 
-	for(int row = 0; row < 9; row++){
+	cout << "convolution finished                                                                      \n";
+
+	
+
+	/* for(int row = 0; row < 9; row++){
 		for(int col = 0; col < 7; col++){
 			cout << image[row*7 + col] << ' ';
 		}
 		cout << endl;
+	} */
+
+	cout << "performing downsampling\n";
+
+	while(tb-> PC_out < 102*2){
+		//cout << tb -> PC_out << endl;
+		if(tb-> writeAddress > 255 && tb -> wrEnMem == 1){
+			//image[tb-> writeAddress - 260] = tb -> writeData;
+			//cout << tb-> writeAddress << " = " << (tb -> writeData + 0) <<'\n';
+			outfile << tb-> writeAddress << ' ' << (tb -> writeData + 0) << endl;
+			address = (tb-> writeAddress);
+			row = address/400;
+			col = address%400;
+			//cout << "performing vertical convolution on row:" << '\t' << row << " and col:" << '\t' << col << '\t' << '\r';
+
+		}
+		tick(++tickcount, tb, tfp);
 	}
+
+	outfile.close();
+
+	//cout << ""
+
+	/* for(int row = 0; row < 5; row++){
+		for(int col = 0; col < 4; col++){
+			cout << image[row*4 + col] << ' ';
+		}
+		cout << endl;
+	} */
 
 }

@@ -10,17 +10,47 @@ module registerFile(
     input wrEn,
 
     input clk,
+    input reset,
     input [3:0] rd,
-    input [31:0] wr_data
+    input [31:0] wr_data,
+    
+    input changeConvolve,
+    input convolve,
+    input calcLoopOverhead
     );
-
+    
+    reg [2:0] convolveState;
+    
     reg [31:0] register_file [15:0];
+    
+    wire [31:0] loopLength = convolveState == 3'b010 ? register_file[2] : register_file[1];
+    wire [31:0] convolve1 = register_file[4] == loopLength ? 32'h00000000 : register_file[9];
+    wire [31:0] convolve3 = register_file[4] == 32'h00000001 ? 32'h00000000 : register_file[7];
+    wire [31:0] convolve2 = {register_file[8][30:0], 1'b0};
+    wire [31:0] convolvedValue = convolve1 + convolve2 + convolve3;
+    
+    wire [31:0] nextPixel = register_file[3] + (convolveState == 3'b010 ? 32'h00000001 : register_file[2]);
+    
     assign out_rs1 = register_file[rs1];
     assign out_rs2 = register_file[rs2];
 
     always@(posedge clk)begin
-        if(wrEn)begin
+    	if (changeConvolve && wrEn)begin
+    		convolveState <= {convolveState[1:0], convolveState[2]};
+    	end
+    
+    	if(reset)begin
+    		convolveState <= 3'b001;
+        end else if(wrEn) begin
             register_file[rd] <= wr_data;
+        end else if(convolve & (convolveState != 3'b001)) begin
+        	register_file[9] <= {2'b00, convolvedValue[31:2]};
+        end else if(calcLoopOverhead & (convolveState != 3'b001)) begin
+        	register_file[4] <= register_file[4] - 32'h00000001;
+        	register_file[3] <= nextPixel;
+        	register_file[11] <= register_file[11] + register_file[2];
+        	register_file[9] <= register_file[8];
+        	register_file[8] <= register_file[7];
         end
     end
 
@@ -63,6 +93,8 @@ endmodule
 
 module datapath(
 
+	input reset,
+
     input wrEn,
     input [3:0] rs1,
     input [3:0] rs2,
@@ -79,6 +111,10 @@ module datapath(
     input choose_load_data,
     output [31:0] mem_address,
     output [31:0] write_data,
+    
+    input changeConvolve,
+    input convolve,
+    input calcLoopOverhead,
 
     input isBranch,
     output [31:0] nextPC,
@@ -115,7 +151,13 @@ module datapath(
 
         .clk(clk),
         .rd(rd),
-        .wr_data(writeback_data)
+        .wr_data(writeback_data),
+        
+        .reset(reset),
+        
+        .changeConvolve(changeConvolve),
+    	.convolve(convolve),
+    	.calcLoopOverhead(calcLoopOverhead)
     );
 
     alu datapath_alu(
@@ -175,6 +217,10 @@ module controlStore(
     input reset,
 
     input [7:0] instByte,
+    
+    output changeConvolve,
+    output convolve,
+    output calcLoopOverhead,
 
     output write_back_mem
 
@@ -237,6 +283,10 @@ module controlStore(
     assign wrEn = stateReg == write_back;
 
     assign write_back_mem = stateReg == mem_write;
+    
+    assign changeConvolve = inst == 16'b0000100000000010;
+    assign convolve = (inst[2:0] == 3'b101) & (stateReg == fetch_inst_2);
+    assign calcLoopOverhead = (inst[2:0] == 3'b101) & (stateReg == calc_new_PC);
 
     always@(posedge clk)begin
         if(reset)begin
@@ -329,8 +379,15 @@ module cpu(
     wire [31:0] nextPC;
     wire [31:0] branch_imm;
     wire [31:0] PC;
+    
+    wire changeConvolve;
+    wire convolve;
+    wire calcLoopOverhead;
 
     datapath datapath(
+    
+    	.reset(reset),
+    
         .wrEn(wrEn),
         .rs1(rs1),
         .rs2(rs2),
@@ -351,7 +408,11 @@ module cpu(
         .isBranch(isBranch),
         .nextPC(nextPC),
         .branch_imm(branch_imm),
-        .PC(PC & 32'hfffffffe)
+        .PC(PC & 32'hfffffffe),
+        
+        .changeConvolve(changeConvolve),
+    	.convolve(convolve),
+    	.calcLoopOverhead(calcLoopOverhead)
     );
 
     wire choose_PC;
@@ -382,7 +443,11 @@ module cpu(
 
         .instByte(read_data),
 
-        .write_back_mem(write_back_mem)
+        .write_back_mem(write_back_mem),
+        
+        .changeConvolve(changeConvolve),
+    	.convolve(convolve),
+    	.calcLoopOverhead(calcLoopOverhead)
     );
 
     assign address = choose_PC ? PC : mem_address;
@@ -437,7 +502,7 @@ module testbench(
         if(reset)begin
             filtered <= 1'b0;
         end else if(writeBack & address == 32'h0000ffff)begin
-            filtered <= 1'b1;
+            filtered <= ~filtered;
         end
         if(!startProgram)begin
             if(programWrEn)begin

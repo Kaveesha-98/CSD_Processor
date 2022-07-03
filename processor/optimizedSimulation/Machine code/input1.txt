@@ -1,0 +1,5 @@
+xor r0 r0
+ori r0 8
+sli r0 4
+ori r0 0
+sli r0 4

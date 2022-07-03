@@ -165,10 +165,8 @@ int main(int argc, char **argv){
    	outfile.open("decimatedImage.txt");
 
 	cout << "performing horizontal convolution\n";
-	
-	int cycles = 0;
 
-	while(tb-> PC_out < 39*2){
+	while(tb-> PC_out < 25*2){
 		//cout << tb -> PC_out << endl;
 		if(tb-> writeAddress > 259 && tb -> wrEnMem == 1){
 			//image[tb-> writeAddress - 260] = tb -> writeData;
@@ -181,12 +179,11 @@ int main(int argc, char **argv){
 
 		}
 		tick(++tickcount, tb, tfp);
-		cycles++;
 	}
 
 	cout << "performing vertical convolution                                                                \n";
 
-	while(tb-> PC_out < 70*2){
+	while(tb-> PC_out < 43*2){
 		//cout << tb -> PC_out << endl;
 		if(tb-> writeAddress > 259 && tb -> wrEnMem == 1){
 			//image[tb-> writeAddress - 260] = tb -> writeData;
@@ -199,7 +196,6 @@ int main(int argc, char **argv){
 
 		}
 		tick(++tickcount, tb, tfp);
-		cycles++;
 	}
 
 	cout << "convolution finished                                                                      \n";
@@ -215,8 +211,9 @@ int main(int argc, char **argv){
 
 	cout << "performing downsampling\n";
 
-	while(tb-> PC_out < 102*2){
+	while(tb-> PC_out < 74*2){
 		//cout << tb -> PC_out << endl;
+		//cout << tb-> writeAddress << endl;
 		if(tb-> writeAddress > 255 && tb -> wrEnMem == 1){
 			//image[tb-> writeAddress - 260] = tb -> writeData;
 			//cout << tb-> writeAddress << " = " << (tb -> writeData + 0) <<'\n';
@@ -228,7 +225,6 @@ int main(int argc, char **argv){
 
 		}
 		tick(++tickcount, tb, tfp);
-		cycles++;
 	}
 
 	outfile.close();
@@ -241,6 +237,5 @@ int main(int argc, char **argv){
 		}
 		cout << endl;
 	} */
-	cout << "Total cycles executed: " << cycles << endl;
 
 }

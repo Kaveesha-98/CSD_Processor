@@ -1,0 +1,87 @@
+xor r0, r0 //r0 <- 0
+//loading base address of image
+ori r0, image_addr[31:26]
+sli r0, 6
+ori r0, image_addr[25:20]
+sli r0, 6
+ori r0, image_addr[19:14]
+sli r0, 6
+ori r0, image_addr[13:8]
+sli r0, 6
+ori r0, image_addr[7:2]
+sli r0, 2
+ori r0, image_addr[1:0]
+//getting the height of the image
+load r2, r0(0)
+load r1, r0(1)
+sli r1, 8
+or r1, r2//r1 <- height of the image
+//getting the width of the image
+load r3, r0(2)
+load r2, r0(3)
+sli r2, 8
+or r2, r3 // r2 <- width of the image
+addi r2, -1 // r4 <- x <- width//----------------------------line 13
+mov r5, r1 // r5 <- y <- height
+mov r3, r0//r3 <- r0
+add r3, 4 // r3 <- mem address of image[0][0]
+loop2: xor r9, r9//-----------------------------------------line 17
+load r8, r3(0)
+mov r4, r2 // r4 <- x <- width
+loop1: load r7, r3(1)//-------------------------------------line 20
+store r9, r3(0)
+bgtz r4, loop1//--------------------------------------------line 22
+addi r5, -1
+bgtz r5, loop2//--------------------------------------------line 33
+or r0, r0
+mov r10, r0
+addi r10, 4 // r10 <- mem address of image[0][0]
+mov r3, r10// r3 <- mem address of image[0][0]
+mov r5, r2 // r5 <- x <- width
+loop4: xor r9, r9//-----------------------------------------line 45
+load r8, r3(0)
+mov r4, r1 // r4 <- y <- height
+mov r11, r3
+add r11, r2
+loop3:load r7, r11(0)//----------------------------------------line 50
+store r9, r3(0)
+bgtz r4, loop3//--------------------------------------------line 52
+or r0, r0
+addi r5, -1
+add r10, 1//r10 <- address of new column
+mov r3, r10
+bgtz r5, loop4//---------------------------------------------line 57
+//downsampling
+//changing dimensions
+store r0, r0(-1)//-------------------------------------------line 70
+addi r1, 1
+mov r6, r2
+addi r6, 1
+srai r6, 1// new width
+mov r7, r1
+addi r7, 1
+srai r7, 1// new height
+mov r11, r7
+mov r12 , r6
+store r11, r0(0)
+srai r11, 8
+store r11, r0(1)
+store r12, r0(2)
+srai r12, 8
+store r12, r0(3)
+mov r3, r0
+addi r3, 4//storing pixel address
+mov r9, r3//loading row address(new row)
+mov r10, r7//decrement loop 6
+loop6:mov r8, r6//loop 5 decrement//------------------------line 82
+mov r4, r9//loading pixel address
+loop5:load r5, r4(0)//--------------------------------------line 84
+store r5, r3(0)
+addi r3, 1
+addi r4, 2
+addi r8, -1
+bgtz r8, loop5//--------------------------------------------line 89
+add r9, r2
+add r9, r2
+addi r10, -1
+bgtz r10, loop6//-------------------------------------------line 93

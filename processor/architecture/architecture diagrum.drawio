@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-10T17:59:07.937Z" agent="5.0 (X11)" etag="8JlDyHq3YyNMb69uZpRE" version="20.0.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-07-10T18:08:01.240Z" agent="5.0 (X11)" etag="EmpWTwJZLhFx7fxULn4a" version="20.0.4" type="github" pages="6">
   <diagram id="jAKgODnmO8hQ9NllSu6u" name="register file">
     <mxGraphModel dx="2200" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -975,9 +975,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="390" y="370" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="540" y="655" />
-              <mxPoint x="540" y="370" />
-              <mxPoint x="390" y="370" />
+              <mxPoint x="470" y="655" />
+              <mxPoint x="470" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -999,8 +998,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="390" y="260" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="250" y="955" />
-              <mxPoint x="250" y="260" />
+              <mxPoint x="310" y="955" />
+              <mxPoint x="310" y="260" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1008,9 +1007,9 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="390" y="1040" />
-              <mxPoint x="615" y="1040" />
-              <mxPoint x="615" y="20" />
-              <mxPoint x="830" y="20" />
+              <mxPoint x="490" y="1040" />
+              <mxPoint x="490" y="20" />
+              <mxPoint x="590" y="20" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1027,35 +1026,34 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-21" value="&lt;div&gt;vertictal convolution&lt;br&gt;&lt;/div&gt;&lt;div&gt;Initialize first iteration of outer loop&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="50" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="50" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-23" target="RifaxJMjPhDmRl_HPQVg-25">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="270" as="targetPoint" />
+            <mxPoint x="590" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-23" value="&lt;div&gt;vertical convolution&lt;br&gt;&lt;/div&gt;&lt;div&gt;Initialize first iteration of inner loop&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="160" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="160" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-25" target="RifaxJMjPhDmRl_HPQVg-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-25" value="calculate filtered value of pixel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="270" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="270" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-27" target="RifaxJMjPhDmRl_HPQVg-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-27" value="Initialize next iteration of inner loop" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-30">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="240" as="targetPoint" />
+            <mxPoint x="590" y="240" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="980" y="525" />
-              <mxPoint x="980" y="240" />
-              <mxPoint x="830" y="240" />
+              <mxPoint x="680" y="525" />
+              <mxPoint x="680" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1063,125 +1061,138 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-30" value="pixels left in column?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="760" y="480" width="140" height="90" as="geometry" />
+          <mxGeometry x="520" y="480" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-32" target="RifaxJMjPhDmRl_HPQVg-36">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="700" as="targetPoint" />
+            <mxPoint x="590" y="700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-32" value="filter last pixel in row" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="600" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-34">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="830" y="130" as="targetPoint" />
+            <mxPoint x="590" y="130" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="690" y="825" />
-              <mxPoint x="690" y="130" />
+              <mxPoint x="510" y="825" />
+              <mxPoint x="510" y="130" />
             </Array>
+            <mxPoint x="520" y="825" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-34" target="RifaxJMjPhDmRl_HPQVg-55">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="830" y="900" />
-              <mxPoint x="830" y="900" />
+              <mxPoint x="590" y="900" />
+              <mxPoint x="700" y="900" />
+              <mxPoint x="700" y="20" />
+              <mxPoint x="810" y="20" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-34" value="all rows finished?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="760" y="780" width="140" height="90" as="geometry" />
+          <mxGeometry x="520" y="780" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-36" target="RifaxJMjPhDmRl_HPQVg-34">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="780" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-36" value="initialize next iteration outer loop" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="770" y="690" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="690" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-39" target="RifaxJMjPhDmRl_HPQVg-41">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-39" target="RifaxJMjPhDmRl_HPQVg-41">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="830" y="1080" />
-              <mxPoint x="280" y="1080" />
+              <mxPoint x="810" y="240" />
+              <mxPoint x="810" y="240" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-39" value="&lt;div&gt;downsampling&lt;br&gt;&lt;/div&gt;&lt;div&gt;Initialize first iteration of outer loop&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="990" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-41" target="RifaxJMjPhDmRl_HPQVg-43">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-41" target="RifaxJMjPhDmRl_HPQVg-43">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="385" y="1400" as="targetPoint" />
+            <mxPoint x="345" y="1370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-41" value="&lt;div&gt;downsampling&lt;br&gt;&lt;/div&gt;&lt;div&gt;Initialize first iteration of inner loop&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="220" y="1110" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-43" target="RifaxJMjPhDmRl_HPQVg-45">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-43" target="RifaxJMjPhDmRl_HPQVg-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-43" value="get downsampled pixel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="1210" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-45" target="RifaxJMjPhDmRl_HPQVg-48">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-45" target="RifaxJMjPhDmRl_HPQVg-48">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-45" value="Initialize next iteration of inner loop" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="565" y="1210" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="430" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-48">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-48" target="RifaxJMjPhDmRl_HPQVg-54">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="350" y="1240" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="790" y="1130" />
-              <mxPoint x="350" y="1130" />
-            </Array>
+            <mxPoint x="955" y="930" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-48" target="RifaxJMjPhDmRl_HPQVg-54">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-48">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="385" y="1640" as="targetPoint" />
+            <mxPoint x="810" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="900" y="565" />
+              <mxPoint x="900" y="320" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-48" value="pixels left in row?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1195" width="140" height="90" as="geometry" />
+          <mxGeometry x="740" y="520" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-52">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-43">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="280" y="1080" as="targetPoint" />
+            <mxPoint x="850" y="370" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="200" y="1345" />
-              <mxPoint x="200" y="1080" />
+              <mxPoint x="770" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="RifaxJMjPhDmRl_HPQVg-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-52" target="RifaxJMjPhDmRl_HPQVg-58">
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-52" target="RifaxJMjPhDmRl_HPQVg-58">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="775" />
+              <mxPoint x="720" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-52" value="all columns finished?" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="880" y="1300" width="140" height="90" as="geometry" />
+          <mxGeometry x="740" y="730" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-54" target="RifaxJMjPhDmRl_HPQVg-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-54" value="initialize next iteration outer loop" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="890" y="1210" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-55" target="RifaxJMjPhDmRl_HPQVg-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-55" value="write downsampled dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="770" y="900" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="70" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-58" value="finished" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="890" y="1420" width="120" height="60" as="geometry" />
+          <mxGeometry x="750" y="850" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RifaxJMjPhDmRl_HPQVg-60" target="RifaxJMjPhDmRl_HPQVg-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RifaxJMjPhDmRl_HPQVg-60" value="start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RifaxJMjPhDmRl_HPQVg-43" value="get downsampled pixel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="340" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

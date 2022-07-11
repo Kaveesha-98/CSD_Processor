@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-10T18:12:09.433Z" agent="5.0 (X11)" etag="OVmThyA2ilY_XAbnLPSM" version="20.0.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-07-11T07:50:15.917Z" agent="5.0 (X11)" etag="9IYLvVZmU19IKZJHqOdK" version="20.0.4" type="github" pages="6">
   <diagram id="jAKgODnmO8hQ9NllSu6u" name="register file">
-    <mxGraphModel dx="2200" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1930" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -350,28 +350,10 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Duh42gK0goa6TEWLcNCv" name="datapath">
-    <mxGraphModel dx="1350" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1080" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="QkNCo-RQiLtXUDhfuy70-0" />
         <mxCell id="QkNCo-RQiLtXUDhfuy70-1" parent="QkNCo-RQiLtXUDhfuy70-0" />
-        <mxCell id="ziFY6fFA-GQqZp0IWx6c-0" value="rs1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" edge="1">
-          <mxGeometry x="1" y="20" relative="1" as="geometry">
-            <mxPoint x="347.94" y="470" as="targetPoint" />
-            <mxPoint x="-20" y="20" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ziFY6fFA-GQqZp0IWx6c-1" value="rs2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" edge="1">
-          <mxGeometry x="1" y="10" relative="1" as="geometry">
-            <mxPoint x="394.94" y="480" as="targetPoint" />
-            <mxPoint x="-10" y="10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ziFY6fFA-GQqZp0IWx6c-2" value="rd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" edge="1">
-          <mxGeometry x="1" y="20" relative="1" as="geometry">
-            <mxPoint x="442.94" y="470" as="targetPoint" />
-            <mxPoint x="-20" y="20" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="ziFY6fFA-GQqZp0IWx6c-3" value="out_rs1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" target="5S5nxF_IWyjc0VZf9n4d-7" edge="1">
           <mxGeometry x="-0.4649" y="15" relative="1" as="geometry">
             <mxPoint x="479.94" y="175" as="targetPoint" />
@@ -389,9 +371,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ziFY6fFA-GQqZp0IWx6c-8" value="wrEn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Courier New;fontSize=11;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" edge="1">
-          <mxGeometry x="1" y="20" relative="1" as="geometry">
-            <mxPoint x="239.94" y="220.28571428571422" as="targetPoint" />
-            <mxPoint x="-20" y="-20" as="offset" />
+          <mxGeometry x="1" y="10" relative="1" as="geometry">
+            <mxPoint x="270" y="500" as="targetPoint" />
+            <mxPoint x="-10" y="10" as="offset" />
+            <Array as="points">
+              <mxPoint x="270" y="220" />
+              <mxPoint x="270" y="490" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="HtBTQt9m0TzbyvhkHvJs-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Courier New;fontSize=12;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" target="5S5nxF_IWyjc0VZf9n4d-18" edge="1">
@@ -404,7 +390,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ziFY6fFA-GQqZp0IWx6c-10" value="&lt;div&gt;register file&lt;/div&gt;&lt;div&gt;r1 = 32&#39;d3&lt;/div&gt;&lt;div&gt;r2 = 32&#39;d5&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" target="1H4_v0vV3kLdSbx_yv0a-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="442.4" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" target="1H4_v0vV3kLdSbx_yv0a-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="394.94000000000017" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="QkNCo-RQiLtXUDhfuy70-1" source="ziFY6fFA-GQqZp0IWx6c-10" target="1H4_v0vV3kLdSbx_yv0a-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="347.6" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ziFY6fFA-GQqZp0IWx6c-10" value="&lt;div&gt;register file&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
           <mxGeometry x="299.94" y="130" width="190" height="180" as="geometry" />
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-0" value="op1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-6" target="5S5nxF_IWyjc0VZf9n4d-7" edge="1">
@@ -427,16 +428,16 @@
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-31" value="is_zero" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5S5nxF_IWyjc0VZf9n4d-3" vertex="1" connectable="0">
           <mxGeometry x="0.1349" relative="1" as="geometry">
-            <mxPoint x="-18" y="-17" as="offset" />
+            <mxPoint x="-25" y="8" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-4" value="alu_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-6" edge="1">
-          <mxGeometry x="1" y="-20" relative="1" as="geometry">
-            <mxPoint x="913.1" y="480" as="targetPoint" />
-            <mxPoint x="17" y="20" as="offset" />
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="913" y="510" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5S5nxF_IWyjc0VZf9n4d-5" value="alu_out = 32&#39;d7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-6" target="LRV7qB-sWVuUqT6pTxhS-0" edge="1">
+        <mxCell id="5S5nxF_IWyjc0VZf9n4d-5" value="alu_out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-6" target="LRV7qB-sWVuUqT6pTxhS-0" edge="1">
           <mxGeometry x="-0.1104" y="10" relative="1" as="geometry">
             <mxPoint x="1060" y="210" as="targetPoint" />
             <Array as="points" />
@@ -448,11 +449,12 @@
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-19" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640.0400000000001" y="482.4" as="targetPoint" />
+            <mxPoint x="660" y="510" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="705" y="-110" />
-              <mxPoint x="705" y="-90" />
-              <mxPoint x="640" y="-90" />
+              <mxPoint x="717" y="-20" />
+              <mxPoint x="640" y="-20" />
+              <mxPoint x="640" y="470" />
+              <mxPoint x="660" y="470" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -469,7 +471,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="5S5nxF_IWyjc0VZf9n4d-7" value="op1=32&#39;d3" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
+        <mxCell id="5S5nxF_IWyjc0VZf9n4d-7" value="op1" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
           <mxGeometry x="670.0400000000001" y="159" width="70" height="18" as="geometry" />
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=oval;endFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-8" edge="1">
@@ -484,23 +486,23 @@
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-8" target="QVjDJqJmwxXtFDsYmFaR-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5S5nxF_IWyjc0VZf9n4d-8" value="op2=32&#39;d4" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
+        <mxCell id="5S5nxF_IWyjc0VZf9n4d-8" value="op2" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
           <mxGeometry x="670.0400000000001" y="197.5" width="70" height="15" as="geometry" />
-        </mxCell>
-        <mxCell id="5S5nxF_IWyjc0VZf9n4d-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-10" target="5S5nxF_IWyjc0VZf9n4d-6" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="5S5nxF_IWyjc0VZf9n4d-10" value="cmp_reg" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="670.0400000000001" y="285" width="70" height="19.5" as="geometry" />
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="5S5nxF_IWyjc0VZf9n4d-18" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1410" y="490" as="targetPoint" />
+            <mxPoint x="1360" y="508" as="targetPoint" />
+            <mxPoint x="1275" y="237.50000000000023" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1275" y="270" />
+              <mxPoint x="1360" y="270" />
+              <mxPoint x="1360" y="508" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-21" value="update_stage_2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5S5nxF_IWyjc0VZf9n4d-20" vertex="1" connectable="0">
           <mxGeometry x="0.725" y="-5" relative="1" as="geometry">
-            <mxPoint x="5" y="63" as="offset" />
+            <mxPoint x="5" y="53" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="5S5nxF_IWyjc0VZf9n4d-18" value="write back buffer" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
@@ -556,14 +558,14 @@
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-5" value="update_stage_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
           <mxGeometry x="250" y="680" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="QVjDJqJmwxXtFDsYmFaR-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" edge="1">
+        <mxCell id="QVjDJqJmwxXtFDsYmFaR-6" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" edge="1" source="QVjDJqJmwxXtFDsYmFaR-7">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="360" y="560" as="sourcePoint" />
             <mxPoint x="360" y="900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-7" value="r1 and r2 are read" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="330" y="530" width="60" height="30" as="geometry" />
+          <mxGeometry x="330" y="560" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-8" value="" style="endArrow=none;html=1;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -603,12 +605,18 @@
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="QVjDJqJmwxXtFDsYmFaR-17" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="520" y="480" as="targetPoint" />
+            <mxPoint x="490" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="305" />
+              <mxPoint x="530" y="340" />
+              <mxPoint x="490" y="340" />
+              <mxPoint x="490" y="510" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-19" value="immediate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QVjDJqJmwxXtFDsYmFaR-18" vertex="1" connectable="0">
           <mxGeometry x="0.8285" y="-1" relative="1" as="geometry">
-            <mxPoint y="28" as="offset" />
+            <mxPoint y="26" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="QVjDJqJmwxXtFDsYmFaR-17" edge="1">
@@ -616,9 +624,9 @@
             <mxPoint x="570" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QVjDJqJmwxXtFDsYmFaR-21" value="&lt;div&gt;choose&lt;/div&gt;&lt;div&gt;immediate&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QVjDJqJmwxXtFDsYmFaR-20" vertex="1" connectable="0">
+        <mxCell id="QVjDJqJmwxXtFDsYmFaR-21" value="&lt;div&gt;choose_immediate&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="QVjDJqJmwxXtFDsYmFaR-20" vertex="1" connectable="0">
           <mxGeometry x="0.836" y="1" relative="1" as="geometry">
-            <mxPoint x="9" y="37" as="offset" />
+            <mxPoint x="-2" y="19" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QVjDJqJmwxXtFDsYmFaR-17" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=south;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
@@ -642,7 +650,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-2" value="load_data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="990" y="520" width="60" height="30" as="geometry" />
+          <mxGeometry x="990" y="505" width="60" height="17.5" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-5" target="LRV7qB-sWVuUqT6pTxhS-0" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -653,7 +661,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-5" value="choose_load_data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="1080" y="520" width="60" height="30" as="geometry" />
+          <mxGeometry x="1080" y="503.75" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-8" value="" style="endArrow=classic;html=1;rounded=0;startArrow=oval;startFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -667,22 +675,22 @@
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-9" value="mem_address" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-8" vertex="1" connectable="0">
           <mxGeometry x="0.9226" y="2" relative="1" as="geometry">
-            <mxPoint y="22" as="offset" />
+            <mxPoint y="31" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-10" value="" style="endArrow=classic;html=1;rounded=0;startArrow=oval;startFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="500" y="265" as="sourcePoint" />
-            <mxPoint x="1300" y="490" as="targetPoint" />
+            <mxPoint x="1280" y="500" as="targetPoint" />
             <Array as="points">
               <mxPoint x="500" y="390" />
-              <mxPoint x="1300" y="390" />
+              <mxPoint x="1280" y="390" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-11" value="write_data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-10" vertex="1" connectable="0">
           <mxGeometry x="0.953" relative="1" as="geometry">
-            <mxPoint y="44" as="offset" />
+            <mxPoint y="37" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-12" value="&lt;h1&gt;DataPath v1(reg-reg, reg-imm, mov)&lt;br&gt;&lt;/h1&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;module datapath(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input wrEn,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rs1,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rs2,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rd,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [31:0] alu_imm,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input choose_alu_imm,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] alu_op,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input clk,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input update_1,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input update_2&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;);&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] op1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] op2;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] cmp_reg;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] writeback_data;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] out_rs1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] out_rs2;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] op2_wire = choose_alu_imm ? alu_imm : out_rs2;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] alu_result;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire is_zero;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;registerFile register_file(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rs1(rs1),&lt;span&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rs2(rs2),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.out_rs1(out_rs1),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;/span&gt;.out_rs2(out_rs2),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.clk(clk),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rd(rd),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.wr_data(writeback_data)&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;);&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;alu datapath_alu(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.alu_op(alu_op),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.op1(op1),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.op2(op2),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.cmp_reg(cmp_reg),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.alu_out(alu_result),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.is_zero(is_zero)&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;);&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;always@(posedge clk)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;if(update_1)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;op1 &amp;lt;= rs1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;op2 &amp;lt;= op2_wire; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;if(update_2)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;writeback_data &amp;lt;= alu_result;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;endmodule&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
@@ -696,32 +704,32 @@
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=oval;endFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-14" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640" as="targetPoint" />
+            <mxPoint x="640" y="70" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="686" />
+              <mxPoint x="698" y="69.5" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-14" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540" y="-320" as="targetPoint" />
+            <mxPoint x="550" y="-120" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="734" y="-100" />
-              <mxPoint x="540" y="-100" />
+              <mxPoint x="746" y="-30.5" />
+              <mxPoint x="552" y="-30.5" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-48" value="PC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-46" vertex="1" connectable="0">
           <mxGeometry x="0.6575" y="2" relative="1" as="geometry">
-            <mxPoint y="-86" as="offset" />
+            <mxPoint y="-62" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-14" value="PC_buffer" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="662.59" y="-70" width="94.94" height="20" as="geometry" />
+          <mxGeometry x="674.59" y="-0.5" width="94.94" height="20" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=oval;startFill=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-16" target="LRV7qB-sWVuUqT6pTxhS-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1080" y="-80" as="targetPoint" />
+            <mxPoint x="1092" y="-10.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-28" value="branched_address" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-26" vertex="1" connectable="0">
@@ -730,27 +738,27 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-16" value="Add" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="842.65" y="-110" width="120" height="60" as="geometry" />
+          <mxGeometry x="854.65" y="-40.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;startArrow=oval;startFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-19" target="LRV7qB-sWVuUqT6pTxhS-16" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-19" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="600" y="-310" as="targetPoint" />
+            <mxPoint x="610" y="-120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-47" value="branch_imm" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-45" vertex="1" connectable="0">
           <mxGeometry x="0.9194" relative="1" as="geometry">
-            <mxPoint y="-21" as="offset" />
+            <mxPoint y="-16" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-19" value="branch_imm_buffer" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="655" y="-142" width="100.12" height="20" as="geometry" />
+          <mxGeometry x="667" y="-72.5" width="100.12" height="20" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=oval;startFill=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-21" target="LRV7qB-sWVuUqT6pTxhS-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1080" as="targetPoint" />
+            <mxPoint x="1092" y="69.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-29" value="link_address" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-27" vertex="1" connectable="0">
@@ -759,11 +767,11 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-21" value="+2" style="rounded=0;whiteSpace=wrap;html=1;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="842.65" y="-30" width="120" height="60" as="geometry" />
+          <mxGeometry x="854.65" y="39.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-30" target="LRV7qB-sWVuUqT6pTxhS-34" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1230" y="-40" as="targetPoint" />
+            <mxPoint x="1242" y="29.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-33" value="branch_result" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LRV7qB-sWVuUqT6pTxhS-32" vertex="1" connectable="0">
@@ -772,40 +780,54 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-30" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=south;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="1070" y="-100" width="60" height="120" as="geometry" />
+          <mxGeometry x="1082" y="-30.5" width="60" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=oval;endFill=1;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-34" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1010" as="targetPoint" />
+            <mxPoint x="1022" y="69.5" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1150" y="-10" />
-              <mxPoint x="1150" y="30" />
-              <mxPoint x="1010" y="30" />
+              <mxPoint x="1162" y="59.5" />
+              <mxPoint x="1162" y="99.5" />
+              <mxPoint x="1022" y="99.5" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-36" value="is_branch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-34" edge="1">
-          <mxGeometry x="1" y="20" relative="1" as="geometry">
-            <mxPoint x="1240" y="-270" as="targetPoint" />
+          <mxGeometry x="1" y="10" relative="1" as="geometry">
+            <mxPoint x="1252" y="-120" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1240" y="-270" />
+              <mxPoint x="1252" y="-70" />
+              <mxPoint x="1252" y="-70" />
             </Array>
-            <mxPoint x="20" y="-20" as="offset" />
+            <mxPoint x="8" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-34" value="" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;direction=south;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="1210" y="-100" width="60" height="120" as="geometry" />
+          <mxGeometry x="1222" y="-30.5" width="60" height="120" as="geometry" />
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-44" value="&lt;h1&gt;DataPath v3(reg-reg, reg-imm, mov, load, store, bgtz)&lt;br&gt;&lt;/h1&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;module datapath(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input wrEn,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rs1,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rs2,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] rd,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [31:0] alu_imm,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input choose_alu_imm,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;input [3:0] alu_op,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;input clk,&lt;span&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input update_1,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;input update_2,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input [31:0] load_data,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input choose_load_data,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;output [31:0] mem_address,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;output [31:0] write_data,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input isBranch,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;output nextPC,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input [31:0] branch_imm,&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;input [31:0] PC&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;);&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] op1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] op2;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] cmp_reg;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;reg [31:0] writeback_buffer;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;reg [31:0] branch_imm_buffer;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;reg [31:0] PC_buffer;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;reg [31:0] new_PC_buffer;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] out_rs1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] out_rs2;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] op2_wire = choose_alu_imm ? alu_imm : out_rs2;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire [31:0] alu_result;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;wire is_zero;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;wire [31:0] writeback_data = choose_load_data ? load_data : alu_result;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;wire [31:0] branch_result = is_zero ? link_address : branch_address;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;wire [31:0] new_PC = is_branch ? branch_result : link_address;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;registerFile register_file(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rs1(rs1),&lt;span&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rs2(rs2),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.out_rs1(out_rs1),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;/span&gt;.out_rs2(out_rs2),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.clk(clk),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.rd(rd),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.wr_data(writeback_data)&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;&lt;span&gt; &lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;);&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;alu datapath_alu(&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.alu_op(alu_op),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.op1(op1),&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.op2(op2),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.cmp_reg(cmp_reg),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.alu_out(alu_result),&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;.is_zero(is_zero)&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;);&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font style=&quot;font-size: 12px&quot; face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; assign mem_address = alu_result;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; assign write_data = out_rs2;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; assign next_PC = new_PC; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;always@(posedge clk)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;if(update_1)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;op1 &amp;lt;= rs1;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;op2 &amp;lt;= op2_wire;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;   branch_imm_buffer &amp;lt;= branch_imm;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;   PC_buffer &amp;lt;= PC &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;if(update_2)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;writeback_buffer &amp;lt;= writeback_data;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp; if(update_new_PC)begin&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp;&amp;nbsp; new_PC_buffer &amp;lt;= newPC;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&amp;nbsp; end&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Courier New&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt; &lt;/span&gt;end&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;line-height: 0&quot;&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;endmodule&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
           <mxGeometry x="1640" y="-510" width="540" height="1115" as="geometry" />
         </mxCell>
-        <mxCell id="LRV7qB-sWVuUqT6pTxhS-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-51" target="LRV7qB-sWVuUqT6pTxhS-34" edge="1">
+        <mxCell id="LRV7qB-sWVuUqT6pTxhS-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="QkNCo-RQiLtXUDhfuy70-1" source="LRV7qB-sWVuUqT6pTxhS-51" target="LRV7qB-sWVuUqT6pTxhS-34" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1460" y="-80" as="targetPoint" />
+            <mxPoint x="1472" y="-10.5" as="targetPoint" />
+            <mxPoint x="1332" y="-250.5" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1330" y="30" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="LRV7qB-sWVuUqT6pTxhS-51" value="next_PC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="QkNCo-RQiLtXUDhfuy70-1" vertex="1">
-          <mxGeometry x="1500" y="-350" width="60" height="30" as="geometry" />
+          <mxGeometry x="1300" y="-150" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-1" value="rd" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QkNCo-RQiLtXUDhfuy70-1">
+          <mxGeometry x="432" y="505" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-3" value="rs2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QkNCo-RQiLtXUDhfuy70-1">
+          <mxGeometry x="387.40999999999997" y="507.5" width="15.06" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="1H4_v0vV3kLdSbx_yv0a-5" value="rs1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="QkNCo-RQiLtXUDhfuy70-1">
+          <mxGeometry x="341" y="507.5" width="12.4" height="15" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
